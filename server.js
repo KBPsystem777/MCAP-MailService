@@ -10,7 +10,7 @@ const port = process.env.PORT || 1964
 app.use(bodyParser.urlencoded())
 app.get('/', (req, res) => res.send('Welcome to MCAP Mail Service!'))
 
-app.post('/send-quote', (erq, res) => {
+app.post('/send-quote', (req, res) => {
     let body = req.body
     console.log(body)
     async function main() {
