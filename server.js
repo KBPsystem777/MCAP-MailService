@@ -25,15 +25,15 @@ app.post('/send-quote', (req, res) => {
         const mailTemplate = `
             <h3>New Message from www.mcapadvertising.com</h3>
             
-            <p>Good day! ${body.name} is requesting a product quote</p><br>
+            <p>Good day! <b>${body.name}</b> is requesting a product quote</p><br>
 
             <p>See thier contact details below:</p>
 
-            <p>Sender: ${body.name}</p>
+            <p>Sender: <b>${body.name}</b></p>
 
-            <p>Email: ${body.email}</p>
+            <p>Email: <b>${body.email}</b></p>
 
-            <p>Phone: ${body.phone}</p><br>
+            <p>Phone: <b>${body.phone}</b></p><br>
         
             <p>Sent via <a href="https://mcap-mailer.herokuapp.com">https://mcap-mailer.herokuapp.com</a></p>
         `
